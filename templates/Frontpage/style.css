@@ -1,0 +1,175 @@
+/*global variables and definitions*/
+:root {
+  /* scaling mid circle radius based on window size */
+  --circle-radius: clamp(40px, 15vw, 180px);
+  --main-background-color: rgb(148, 182, 182);
+}
+
+/*global settings*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*container class*/
+.container {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows:    1fr 1fr;
+  width:  100vw;
+  height: 100vh;
+}
+
+/*quadrant class*/
+.quadrant {
+  width:  100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/*Main text titles*/
+.title {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0;
+  font-size: 2rem;
+  color: #333;
+  z-index: 2;
+  transition: top 0.3s ease;
+}
+
+/* quadrants */
+.q1 { background-color: #f8b195; }
+.q2 { background-color: #c06c84; }
+.q3 { background-color: #355c7d; }
+.q4 { background-color: #6c5b7b; }
+
+/*descendant title selectors for alignment*/
+.q1 .title, .q3 .title {
+  right: 20px;
+  text-align: right;
+}
+.q2 .title, .q4 .title {
+  left: 20px;
+  text-align: left;
+}
+
+/*quadrant hover overlay*/
+.quadrant::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255,255,255,0);
+  transition: background-color 0.3s ease;
+} /*on hover animation*/
+.quadrant:hover::before {
+  background-color: rgba(255,255,255,0.2);
+}
+
+/*dropdown menus in each quadrant on hover*/
+.q1 .dropdown-menu, .q3 .dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  transform: translateX(-50%);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
+  z-index: 2;
+}
+.q2 .dropdown-menu, .q4 .dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  left: 20%;
+  transform: translateX(-50%);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
+  z-index: 2;
+}
+/*... its list elements*/
+.dropdown-menu li {
+  padding: 0.5em 1em;
+  cursor: pointer;
+  background: rgba(255,255,255,0.8);
+  margin-bottom: 0.2em;
+  border-radius: 4px;
+  transition: background 0.2s;
+}/*elements on hover*/
+.dropdown-menu li:hover {
+  background: rgba(255,255,255,1);
+}/*begin animation on hover for title*/
+.quadrant:hover .title {
+  top: 10%;
+  transform: translateY(0);
+}
+.quadrant:hover .dropdown-menu {
+  top: 20%;
+  opacity: 1;
+  max-height: 500px;
+}
+
+/*circle class*/
+.circle {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  /* use a real value or a custom property */
+  width:  var(--circle-radius);
+  height: var(--circle-radius);
+  background-color: var(--main-background-color);
+  /* Image and centering */
+  background-image: url("../../static/syllabuss_logo_1.png");
+  background-position: center;
+  background-size: contain;
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  z-index: 3;
+
+  pointer-events: auto;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0.8);
+  transition: transform 0.3s ease-out, box-shadow 0.6s ease-out;
+} /*On hover*/
+.circle:hover {
+  cursor: pointer;
+  transform: translate(-50%, -50%) scale(1.1);
+  /*expainding the outline and fading it*/
+  box-shadow: 0 0 0 30px rgba(255,255,255,0);
+}
+
+/*Splash screen id*/
+#splash-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  opacity: 1;
+  transition: opacity 2s cubic-bezier(1,0,.7,-.11);
+}
+/*animation id*/
+#splash-overlay.fade-out {
+  opacity: 0;
+}
+/*splash message class*/
+.splash-message {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+}
