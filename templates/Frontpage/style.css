@@ -12,6 +12,36 @@
   box-sizing: border-box;
 }
 
+/*Animated background*/
+.animated-background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  /* initialize the vars */
+  --angle: 0deg;
+  --spot0-x: 20%; --spot0-y: 30%;
+  --spot1-x: 50%; --spot1-y: 70%;
+  --spot2-x: 80%; --spot2-y: 40%;
+  --spot3-x: 30%; --spot3-y: 80%;
+
+  /*TO-DO: Add more points, smooth out animation, maybe do something with the mouse but Id rather kms*/
+  background:
+    linear-gradient(
+      var(--angle),
+      #862660,
+      #2f2e6e,
+      #748f91,
+      #72604b
+    ),
+    radial-gradient(circle at var(--spot0-x) var(--spot0-y), #862660 0%, transparent 20%),
+    radial-gradient(circle at var(--spot1-x) var(--spot1-y), #2f2e6e 0%, transparent 20%),
+    radial-gradient(circle at var(--spot2-x) var(--spot2-y), #748f91 0%, transparent 20%),
+    radial-gradient(circle at var(--spot3-x) var(--spot3-y), #72604b 0%, transparent 20%);
+  background-size: 100% 100%;
+  background-blend-mode: screen;
+}
+
 /*container class*/
 .container {
   position: relative;
@@ -43,10 +73,41 @@
 }
 
 /* quadrants */
-.q1 { background-color: #f8b195; }
-.q2 { background-color: #c06c84; }
-.q3 { background-color: #355c7d; }
-.q4 { background-color: #6c5b7b; }
+/* Quadrant gradients: white at the center-point of the container, vibrant at the far corner */
+/* Quadrant gradients with a softer off-white at the center */
+.q1 {
+  background: radial-gradient(
+    circle at 100% 100%,
+    #b1b1b165 0%,
+    #ffb29365 100%
+  );
+}
+
+.q2 {
+  background: radial-gradient(
+    circle at 0% 100%,
+    #b1b1b165 0%,
+    #c06c8465 100%
+  );
+}
+
+.q3 {
+  background: radial-gradient(
+    circle at 100% 0%,
+    #b1b1b165 0%,
+    #355c7d65 100%
+  );
+}
+
+.q4 {
+  background: radial-gradient(
+    circle at 0% 0%,
+    #b1b1b165 0%,
+    #6c5b7b65 100%
+  );
+}
+
+
 
 /*descendant title selectors for alignment*/
 .q1 .title, .q3 .title {
@@ -71,7 +132,33 @@
 }
 
 /*dropdown menus in each quadrant on hover*/
-.q1 .dropdown-menu, .q3 .dropdown-menu {
+.q1 .dropdown-menu {
+  /*This grid will be applied to all later, this is just testing it*/
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-auto-flow: column;
+  grid-auto-rows: auto;
+  gap: 0.5em 2em;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 65%;
+  right: 5%;
+  transform: translateX(-50%);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
+  z-index: 2;
+} /*children*/
+.q1 .dropdown-menu li:nth-child(-n+4) {
+  grid-column: 1;
+}
+.q1 .dropdown-menu li:nth-child(n+5) {
+  grid-column: 2;
+}
+
+.q3 .dropdown-menu {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -91,7 +178,7 @@
   margin: 0;
   position: absolute;
   top: 65%;
-  left: 20%;
+  left: 10%;
   transform: translateX(-50%);
   opacity: 0;
   max-height: 0;
@@ -100,16 +187,19 @@
   z-index: 2;
 }
 /*... its list elements*/
+
 .dropdown-menu li {
-  padding: 0.5em 1em;
-  cursor: pointer;
-  background: rgba(255,255,255,0.8);
+  list-style: none;
+  padding: 0.3em 0;
+  background: transparent;
   margin-bottom: 0.2em;
-  border-radius: 4px;
-  transition: background 0.2s;
+  border-radius: 0px;
+  transition: background-color 0.2s, color 0.2s;
+  cursor: pointer;
 }/*elements on hover*/
 .dropdown-menu li:hover {
-  background: rgba(255,255,255,1);
+  text-decoration: underline;
+  background: rgba(255,255,255,0.3);
 }/*begin animation on hover for title*/
 .quadrant:hover .title {
   top: 10%;
