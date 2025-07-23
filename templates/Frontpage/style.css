@@ -1,24 +1,21 @@
-/*global variables and definitions*/
+
 :root {
   /* scaling mid circle radius based on window size */
   --circle-radius: clamp(40px, 15vw, 180px);
   --main-background-color: rgb(148, 182, 182);
 }
 
-/*global settings*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/*Animated background*/
 .animated-background {
   position: fixed;
   inset: 0;
   z-index: -1;
 
-  /* initialize the vars */
   --angle: 0deg;
   --spot0-x: 20%; --spot0-y: 30%;
   --spot1-x: 50%; --spot1-y: 70%;
@@ -42,7 +39,6 @@
   background-blend-mode: screen;
 }
 
-/*container class*/
 .container {
   position: relative;
   display: grid;
@@ -52,7 +48,6 @@
   height: 100vh;
 }
 
-/*quadrant class*/
 .quadrant {
   width:  100%;
   height: 100%;
@@ -60,7 +55,6 @@
   position: relative;
 }
 
-/*Main text titles*/
 .title {
   position: absolute;
   top: 50%;
@@ -72,9 +66,6 @@
   transition: top 0.3s ease;
 }
 
-/* quadrants */
-/* Quadrant gradients: white at the center-point of the container, vibrant at the far corner */
-/* Quadrant gradients with a softer off-white at the center */
 .q1 {
   background: radial-gradient(
     circle at 100% 100%,
@@ -107,9 +98,6 @@
   );
 }
 
-
-
-/*descendant title selectors for alignment*/
 .q1 .title, .q3 .title {
   right: 20px;
   text-align: right;
@@ -119,19 +107,17 @@
   text-align: left;
 }
 
-/*quadrant hover overlay*/
 .quadrant::before {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(255,255,255,0);
   transition: background-color 0.3s ease;
-} /*on hover animation*/
+}
 .quadrant:hover::before {
   background-color: rgba(255,255,255,0.2);
 }
 
-/*dropdown menus in each quadrant on hover*/
 .q1 .dropdown-menu {
   /*This grid will be applied to all later, this is just testing it*/
   display: grid;
@@ -150,7 +136,7 @@
   overflow: hidden;
   transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
   z-index: 2;
-} /*children*/
+}
 .q1 .dropdown-menu li:nth-child(-n+4) {
   grid-column: 1;
 }
@@ -186,7 +172,6 @@
   transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
   z-index: 2;
 }
-/*... its list elements*/
 
 .dropdown-menu li {
   list-style: none;
@@ -196,11 +181,11 @@
   border-radius: 0px;
   transition: background-color 0.2s, color 0.2s;
   cursor: pointer;
-}/*elements on hover*/
+}
 .dropdown-menu li:hover {
   text-decoration: underline;
   background: rgba(255,255,255,0.3);
-}/*begin animation on hover for title*/
+}
 .quadrant:hover .title {
   top: 10%;
   transform: translateY(0);
@@ -211,7 +196,6 @@
   max-height: 500px;
 }
 
-/*circle class*/
 .circle {
   position: absolute;
   top:  50%;
@@ -232,7 +216,7 @@
   pointer-events: auto;
   box-shadow: 0 0 0 0 rgba(255,255,255,0.8);
   transition: transform 0.3s ease-out, box-shadow 0.6s ease-out;
-} /*On hover*/
+}
 .circle:hover {
   cursor: pointer;
   transform: translate(-50%, -50%) scale(1.1);
@@ -240,7 +224,6 @@
   box-shadow: 0 0 0 30px rgba(255,255,255,0);
 }
 
-/*Splash screen id*/
 #splash-overlay {
   position: fixed;
   top: 0; left: 0;
@@ -253,11 +236,9 @@
   opacity: 1;
   transition: opacity 2s cubic-bezier(1,0,.7,-.11);
 }
-/*animation id*/
 #splash-overlay.fade-out {
   opacity: 0;
 }
-/*splash message class*/
 .splash-message {
   font-size: 2rem;
   color: #333;
