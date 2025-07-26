@@ -26,14 +26,10 @@
   background:
     linear-gradient(
       var(--angle),
-      #393850,
-      #393850,
-      #393850,
-      #94b6b6,
-      #94b6b6,
-      #393850,
-      #393850,
-      #393850
+      #862660,
+      #2f2e6e,
+      #748f91,
+      #72604b
     ),
     radial-gradient(circle at var(--spot0-x) var(--spot0-y), #862660 0%, transparent 20%),
     radial-gradient(circle at var(--spot1-x) var(--spot1-y), #2f2e6e 0%, transparent 20%),
