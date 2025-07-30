@@ -1,0 +1,126 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+}
+
+.topbar {
+  background: #e4e9f0;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-list li a {
+  text-decoration: none;
+  color: #555;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.nav-list li a:hover,
+.nav-list li a.active {
+  background: #d0d4db;
+  color: #000;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 48px); /* subtract topbar height */
+}
+
+.search-panel {
+  width: 250px;
+  background: #e4e9f0;
+  padding: 20px;
+}
+.search-box {
+  display: flex;
+  margin-bottom: 20px;
+}
+.search-box input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+.search-box button {
+  padding: 0 12px;
+  border: none;
+  background: #ccc;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+.quick-search {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.quick-item {
+  background: #d0d4db;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.quick-item:hover {
+  background: #bfc4ca;
+}
+
+.results-panel {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.results-header,
+.profile-row {
+  display: grid;
+  grid-template-columns: 40px 1fr 1fr 1fr;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.results-header {
+  background: #d0d4db;
+  font-weight: bold;
+}
+
+.profile-row {
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.profile-pic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #cfd4db;
+  background-size: cover;
+  background-position: center;
+}
+
+.placeholder-row {
+  background: #e4e9f0;
+  border-radius: 4px;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #555;
+  font-weight: bold;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

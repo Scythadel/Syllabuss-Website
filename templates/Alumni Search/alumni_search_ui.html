@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alumni Search</title>
+  <link rel="stylesheet" href="alumni_search.css" />
+</head>
+<body>
+  <header class="topbar">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="students.html">Students</a></li>
+        <li><a href="alumni.html" class="active">Alumni</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="main-container">
+    <aside class="search-panel">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search" />
+        <button id="searchButton">&#128269;</button>
+      </div>
+      <div class="quick-search">
+        <button class="quick-item">Physics</button>
+        <button class="quick-item">Data Science</button>
+        <button class="quick-item">Mathematics</button>
+        <button class="quick-item">Engineering</button>
+      </div>
+    </aside>
+    <section class="results-panel">
+      <div class="results-header">
+        <div class="col profile-col"></div>
+        <div class="col name-col">Name</div>
+        <div class="col studied-col">Studied</div>
+        <div class="col current-col">Current</div>
+      </div>
+    </section>
+  </div>
+  <script src="javascript/script.js"></script>
+</body>
+</html>

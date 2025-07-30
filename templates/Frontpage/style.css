@@ -109,10 +109,12 @@
 .q1 .title, .q3 .title {
   right: 20px;
   text-align: right;
+  transition: top 0.2s ease, transform 0.2s ease;
 }
 .q2 .title, .q4 .title {
   left: 20px;
   text-align: left;
+  transition: top 0.2s ease, transform 0.2s ease;
 }
 
 .quadrant::before {
@@ -160,12 +162,31 @@
   top: 65%;
   right: 5%;
   transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 1.5em;
   opacity: 0;
   max-height: 0;
   overflow: hidden;
   transition: opacity 0.3s ease, top 0.3s ease, max-height 0.3s ease;
   z-index: 2;
 }
+.q3 .dropdown-menu .submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 0.5em;
+  margin: 0;
+  background: rgba(255,255,255,0.9);
+  border-radius: 4px;
+  display: none;
+}
+.q3 .dropdown-menu li:hover > .submenu {
+  display: block;
+}
+
 .q2 .dropdown-menu, .q4 .dropdown-menu {
   list-style: none;
   padding: 0;
@@ -194,9 +215,13 @@
   text-decoration: underline;
   background: rgba(255,255,255,0.3);
 }
-.quadrant:hover .title {
+.q2:hover .title, .q4:hover .title {
   top: 10%;
-  transform: translateY(0);
+  transform: translate(50%, 0);
+}
+.q1:hover .title, .q3:hover .title {
+  top: 10%;
+  transform: translate(-50%, 0);
 }
 .quadrant:hover .dropdown-menu {
   top: 20%;
