@@ -1,0 +1,104 @@
+Number,Course Code,Course Name, Period
+0,BSCH2002,Resolving structure,1. periodi
+1,KEK209,Orgaanisen kemian,1. periodi
+2,BSCH1004,Inorganic Chemistry,2. periodi
+3,BSCH2001,Organic Chemistry 2,2. periodi
+4,KEK207,Epaorgaanisen,3. periodi
+5,KEK208,Epaorgaanisen,3. periodi
+6,KEK210,Orgaanisen,4. period
+0,BSCS1001,Introduction to Programming,1. period
+1,DIGI-A,Student's digital skills: orientation,1. period
+2,SUO-111,Basic level Finnish 1A,1. period
+3,MAT11006,Calculus IA: Limits and differentiation,1. period
+4,MAT12001,Basics of statistics and R I,1. period
+5,BS4001A,Introduction to odern Science,1. period
+6,BS4001B,odern Science working groups,2. period
+7,BSCS1002,Advanced Course in Programming,2. period
+8,KK-ENMALU,Academic and Professional Communication,2. period
+9,SUO-112,Basic level Finnish 1B,2. period
+10,MAT12002,Basics of statistics and R Il,2. period
+11,MAT11007,Calculus IB: Integration,2. period
+12,BSMA1001,Linear algebra and complex nwnbers,2. period
+13,MAT20016,Latex Course,2. period
+14,TKT21999,Optional Intermediate Studies,3. period
+15,MAT11008,Advanced calculus,3. period
+16,SUO-121,Basic level Finnish 2A,3. period
+17,BSMA1006,Probability Calculus I,3. period
+18,BSPH1001,&4 Interactions and bodies,3. period
+19,KK-SAK315,KiVANET: German 6 (CEFR B1),3. period
+20,BSCS10031,Data Structures and Algorithms I,3. period
+21,ML-T001,Tutortraining and Tutoring,4. period
+22,SUO-122,Basic level Finnish 2B,4. period
+23,BSMA2010,Series,4. period
+24,BSCS2006,Data Structures and Algorithms,4. period
+25,BSMA2001,Linear algebra and matrices,4. period
+26,MAT12004,Statistical inference I,4. period
+27,BSMA2007,Differential Equations,4. period
+28,SUO-130,Basic level Fin,Summer
+29,BSCS2015,Data Analysis,Summer
+30,MAT12005,Project in Dat.,Summer
+0,TIME,,1. period
+1,DIGI-A,cr pass Student's digital skills: orientation 1 WiAT20016 cr pass Latex Course 5s. waTTI006 a) Calculus IA: Limits and differentiation 5,2. period
+2,WAT12001,cr » Basics of statistics and,2. period
+3,BSMA1001,cr 3 Linear algebra and complex numbers 2,2. period
+4,BS4001A,cr pass Introduction to Modern Science,2. period
+5,BSCS1001,Introduction to Programming,3. period
+6,ALICE,- Academic Language and Intercultural Exchange (Italian - Finni,4. period
+7,BS4001B,Modern Science working groups,3. period
+8,BSCS1002,Advanced Course in Programming,3. period
+9,KK-ENMALU,Academic and Professional Communication in English 1 & 2 (CEFR B2),3. period
+0,TIME,§ 5,1. period
+1,BSCS1001,cr 5 Introduction to Programming,1. period
+2,BS4001A,Introduction to Modern Science,1. period
+3,MAT11006,Calculus IA: Limits and differentiation,1. period
+4,HIS-111,Basic level Finnish 1A,1. period
+5,BS4001B,odern Science working groups,2. period
+6,BSCS1002,Advanced Course in Programming,2. period
+7,KK-ENMALU,Academic and Professional Communication in Englis,2. period
+8,MAT11007,Calculus IB: Integration,2. period
+9,BSMA1001,Linear algebra and complex nunbers,2. period
+10,DIGI-A,Student's digital skills: orientation,2. period
+11,HER-121,Basic level Finnish 2A,3. period
+12,BSPH1001,Interactions and bodies,3. period
+13,BSPH2001,Basics of thermophysics,3. period
+14,BSMA2010,Series,4. period
+15,BSMA2007,Differential Equations,4. period
+16,BSPH1002,Matter and interactions,4. period
+17,BSPH2002,Thermodynamic potentials,4. period
+18,BSPH2008,Introduction to Relativity theory,4. period
+19,MAT20016,Latex Course,Summer
+20,MAT12001,Basics of statistic,Summer
+21,BSCS2015,Data Analysis wit,Summer
+22,TKT20009,Introduction to C,Summer
+0,BSCS2015,Data Analysis wit,1. period
+1,BSMA2002,Introduction to vector analysis,2. period
+2,FYS2061,Quantum la,2. period
+3,FYS2027,Mechanics,2. period
+4,BSPH1003,Electromagnetism,2. period
+5,FYS2010,Mathematical Methods of Physics la,2. period
+6,FYS1016,Laboratory Exercises in Basic Studies of Physics I,2. period
+7,BSPH1004,Radiation fields and photons,3. period
+8,FYS2011,Mathematical Methods of Physics Ib,3. period
+9,FYS2062,Quantwn Mechanics Ib,3. period
+10,MATR316,Nuclear Physics,3. period
+11,FYS2085,Scientific Computing,3. period
+12,FYS1017,Laboratory Exercises in Basic Studies of Physics,4. period
+13,FYS2016,Electrodynamics I,4. period
+14,FYS2008,Physics Intermediate Studies Laboratory Exercise: Partial differential equations I,4. period
+15,FYS2012,Mathematical Methods of Physics Ila,4. period
+16,TCM302,Quantum _§echanics Ila,4. period
+0,MAT11006,I Calculus IA: Limits and diffe I I a aA Introduction to Modern Scie,1. period
+1,DIGI-A,Student's digital skills: orie,1. period
+2,MAT11007,Calculus IB: Integration,2. period
+3,BSMA1001,Linear algebra and comple»,2. period
+4,BSCS1001,Introduction to Programmi:,2. period
+5,BS4001B,odern Science working gr:,2. period
+6,KK-ENMALU,Academic and Professional,2. period
+7,SUO-112,Basic level Finnish 1B,2. period
+8,SUO-111,Basic level Finnish 1A,2. period
+9,BSCS1006,Computer and Internet,3. period
+10,BSCS10031,Data Structures and Algorit,3. period
+11,TKT200152,Computing and Society: cor,4. period
+12,BSCS2006,Data Structures and Algorit,4. period
+13,TKT200151,Computing and Society: an,4. period
+14,BSCS1002,Advanced Course in Progral,4. period
